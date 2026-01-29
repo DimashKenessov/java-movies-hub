@@ -3,7 +3,7 @@ package ru.practicum.moviehub.http;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-import ru.practicum.moviehub.api.ErrorResponse;
+
 import ru.practicum.moviehub.model.Movie;
 
 import java.io.*;
