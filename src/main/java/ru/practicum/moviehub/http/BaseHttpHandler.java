@@ -43,7 +43,7 @@ public abstract class BaseHttpHandler implements HttpHandler {
         detailsJson.append("]");
 
         String json = String.format("{\"error\":\"%s\",\"details\":%s}",
-                escapeJson(message), detailsJson.toString());
+                escapeJson(message), detailsJson);
         sendJson(exchange, statusCode, json);
     }
 
