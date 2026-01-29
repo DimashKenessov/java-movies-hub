@@ -12,7 +12,9 @@ public class MoviesStore {
     private final AtomicInteger idCounter = new AtomicInteger(1);
     private static MoviesStore instance;
 
-    private MoviesStore() {}
+    private MoviesStore() {
+
+    }
 
     public static MoviesStore getInstance() {
         if (instance == null) {
