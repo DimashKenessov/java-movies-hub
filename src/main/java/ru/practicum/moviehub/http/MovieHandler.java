@@ -17,21 +17,17 @@ public class MovieHandler extends BaseHttpHandler {
     }
 
     @Override
+
     public void handle(HttpExchange exchange) throws IOException {
         try {
             String path = exchange.getRequestURI().getPath();
             String method = exchange.getRequestMethod();
 
-
             if (path.equals("/movies")) {
                 handleMoviesCollection(exchange, method);
-            }
-
-            else if (path.matches("/movies/\\d+")) {
+            } else if (path.matches("/movies/\\d+")) {
                 handleSingleMovie(exchange, method, path);
-            }
-
-            else {
+            } else {
                 sendError(exchange, 404, "Ресурс не найден");
             }
         } catch (Exception e) {
